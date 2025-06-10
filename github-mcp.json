@@ -1,1 +1,0 @@
-{"command": "docker","args": ["run","-i","--rm","-e","GITHUB_PERSONAL_ACCESS_TOKEN","ghcr.io/github/github-mcp-server"],"env":{"GITHUB_PERSONAL_ACCESS_TOKEN": "ghp_aq7DeEDq3T7eG80DxHC4r5LbflWHl9157S"}}
