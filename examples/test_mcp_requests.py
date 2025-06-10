@@ -67,7 +67,22 @@ spec:
         "command": ["version", "--client"]
     })
     
-    # Test 4: Execute bash script
+    # Test 4: Apply manifest with kubectl
+    send_mcp_request("execute_kubectl", {
+        "command": ["apply", "-f", "test-nginx.yaml"]
+    })
+    
+    # Test 5: Check deployment status
+    send_mcp_request("execute_kubectl", {
+        "command": ["get", "deployments"]
+    })
+    
+    # Test 6: Delete manifest with kubectl
+    send_mcp_request("execute_kubectl", {
+        "command": ["delete", "-f", "test-nginx.yaml"]
+    })
+    
+    # Test 7: Execute bash script
     test_script = """#!/bin/bash
 echo "Hello from MCP server!"
 echo "Current directory: $(pwd)"
