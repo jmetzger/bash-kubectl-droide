@@ -69,7 +69,7 @@ spec:
     
     # Test 4: Apply manifest with kubectl
     send_mcp_request("execute_kubectl", {
-        "command": ["apply", "-f", "test-nginx.yaml"]
+        "command": ["apply", "-f", "manifests/test-nginx.yaml"]
     })
     
     # Test 5: Check deployment status
@@ -79,7 +79,7 @@ spec:
     
     # Test 6: Delete manifest with kubectl
     send_mcp_request("execute_kubectl", {
-        "command": ["delete", "-f", "test-nginx.yaml"]
+        "command": ["delete", "-f", "manifests/test-nginx.yaml"]
     })
     
     # Test 7: Execute bash script
